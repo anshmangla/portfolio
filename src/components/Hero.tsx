@@ -198,7 +198,7 @@ export const Hero: React.FC = () => {
                   className="absolute bottom-10 right-0 glass-card px-3.5 py-2 rounded-xl text-xs font-semibold text-white flex items-center gap-2 shadow-xl border border-white/10"
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span>94% Attrition ML Model</span>
+                  <span>Gemini Financial Pipelines</span>
                 </motion.div>
 
                 <motion.div
@@ -207,7 +207,7 @@ export const Hero: React.FC = () => {
                   className="absolute bottom-16 left-4 glass-card px-3 py-1.5 rounded-lg text-[11px] font-mono text-[#A3A3A3] border border-white/10 flex items-center gap-1.5"
                 >
                   <CheckCircle2 className="w-3 h-3 text-[#3B82F6]" />
-                  <span>2,000+ PDF RAG Assistant</span>
+                  <span>Automated OCR Platform</span>
                 </motion.div>
               </div>
             ) : (
@@ -235,8 +235,8 @@ export const Hero: React.FC = () => {
                     <span className="text-white font-semibold">Generative AI, LLMs & RAG</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-white/[0.04]">
-                    <span className="text-[#A3A3A3]">Computer Vision:</span>
-                    <span className="text-white font-semibold">Grad-CAM & OpenCV</span>
+                    <span className="text-[#A3A3A3]">Agentic Frameworks:</span>
+                    <span className="text-white font-semibold">LangChain & Agent Workflows</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-white/[0.04]">
                     <span className="text-[#A3A3A3]">Academic Status:</span>

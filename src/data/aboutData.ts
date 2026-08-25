@@ -7,8 +7,8 @@ export const aboutStats: StatItem[] = [
   {
     id: 'stat-1',
     label: 'Internships Completed',
-    value: '2',
-    description: 'Impactful AI/ML Engineering internships at ESRI India Tech and Optimal Virtual Employee.'
+    value: '3',
+    description: 'Impactful AI/ML Engineering internships at Sodhani Capital, ESRI India Tech, and Optimal Virtual Employee.'
   },
   {
     id: 'stat-2',
@@ -24,14 +24,14 @@ export const aboutStats: StatItem[] = [
   },
   {
     id: 'stat-4',
-    label: 'Model & Parser Accuracy',
-    value: '94%',
-    description: 'Achieved 94% accuracy in attrition prediction and 92% in NLP/NER pitch deck analysis.'
+    label: 'Market Data Entities',
+    value: '4,600+',
+    description: 'Automated market data feeds and corporate filings for over 4,600 companies using Node.js and PostgreSQL.'
   },
   {
     id: 'stat-5',
-    label: 'RAG Document Scale',
-    value: '2,000+',
-    description: 'Engineered multi-source PDF RAG assistants and geospatial query agents for real-time analysis.'
+    label: 'Financial Metrics Computed',
+    value: '50+',
+    description: 'Engineered AI pipelines to programmatically compute 50+ financial metrics combined with Gemini-generated equity research.'
   }
 ];

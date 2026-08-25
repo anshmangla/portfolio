@@ -7,13 +7,11 @@ export const skillsData: SkillCategory[] = [
     iconName: 'Sparkles',
     skills: [
       'Large Language Models (LLMs)',
-      'Generative AI & Prompt Engineering',
       'LangChain & Ollama',
       'Retrieval-Augmented Generation (RAG)',
-      'AI Agents & MCP Workflows',
-      'Natural Language Processing (NLP)',
-      'Named Entity Recognition (NER)',
-      'Context-Driven Code Generation'
+      'AI Agents & Workflows',
+      'Prompt Engineering',
+      'Natural Language Processing (NLP)'
     ]
   },
   {
@@ -25,10 +23,7 @@ export const skillsData: SkillCategory[] = [
       'Hugging Face Transformers',
       'TensorFlow & Neural Networks',
       'OpenCV & Computer Vision',
-      'LSTMs & Time-Series Models',
-      'Pandas & Data Analysis Pipelines',
-      'Grad-CAM Satellite Imagery',
-      'Employee Attrition Predictive Models'
+      'Pandas & NumPy'
     ]
   },
   {
@@ -37,13 +32,11 @@ export const skillsData: SkillCategory[] = [
     iconName: 'Server',
     skills: [
       'Python',
-      'C++',
-      'C',
-      'Node.js',
-      'Django Web Framework',
-      'Flask & RESTful APIs',
-      'E2B Sandbox Server-side Execution',
-      'Whisper & pyttsx3 Audio Processing'
+      'Node.js & TypeScript',
+      'Django',
+      'Flask & FastAPI',
+      'Express.js',
+      'C / C++'
     ]
   },
   {
@@ -52,11 +45,11 @@ export const skillsData: SkillCategory[] = [
     iconName: 'Layout',
     skills: [
       'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
       'HTML5 & CSS3',
-      'JavaScript (ES6+)',
-      'Responsive Web UI/UX',
-      'Interactive Map Visualizations',
-      'Dynamic Dashboard Interfaces'
+      'Data Visualization (Chart.js)'
     ]
   },
   {
@@ -65,10 +58,9 @@ export const skillsData: SkillCategory[] = [
     iconName: 'Database',
     skills: [
       'PostgreSQL',
-      'SQL & Relational Queries',
-      'Shapefiles & POI Data Integration',
-      'Multi-Source Dataset Aggregation',
-      'RAG Vector & Document Indexing'
+      'SQL / Relational Queries',
+      'Vector Search',
+      'Data Indexing'
     ]
   },
   {
@@ -76,24 +68,12 @@ export const skillsData: SkillCategory[] = [
     title: 'Cloud',
     iconName: 'Cloud',
     skills: [
-      'E2B Sandbox Cloud Execution',
+      'Microsoft Azure',
+      'Cloudflare Caching & CDN',
+      'Render & Vercel',
+      'Git & GitHub Workflows',
       'Google Earth Engine API',
-      'Web3 & DApps Basics',
-      'Satellite Imagery Processing',
-      'Remote Server & API Deployment'
-    ]
-  },
-  {
-    id: 'cat-tools',
-    title: 'Tools',
-    iconName: 'Wrench',
-    skills: [
-      'Git & GitHub Workflow',
-      'Operating Systems & Linux',
-      'Software Engineering Principles',
-      'Stanford ML Specialization (2024)',
-      'Udemy Web Dev & AI Agents Courses',
-      'Fluent English & Hindi (German Elem.)'
+      'E2B Code Interpreter'
     ]
   }
 ];

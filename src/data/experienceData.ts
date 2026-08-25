@@ -2,6 +2,24 @@ import type { ExperienceItem } from '../types';
 
 export const experienceData: ExperienceItem[] = [
   {
+    id: 'exp-sodhani',
+    role: 'AI Product Engineer Intern',
+    company: 'Sodhani Capital',
+    duration: 'Jul 2026 — Sep 2026',
+    location: 'Remote',
+    description: [
+      'Built Caplore’s financial data platform, automating market data, corporate filings, and exchange feeds for 4,600+ companies using Node.js, TypeScript, PostgreSQL, and Python.',
+      'Engineered an AI fundamental analysis pipeline computing 50+ financial metrics and generating validated equity research reports using Gemini; deployed services on Azure with HTTPS and Cloudflare caching.',
+      'Developed an automated financial OCR pipeline using Chandra OCR to extract and consolidate multi-year statements from annual reports into structured Excel, JSON, HTML, and Markdown outputs.'
+    ],
+    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'Python', 'Azure', 'Gemini', 'Chandra OCR', 'Cloudflare'],
+    highlights: [
+      'Automated market data feeds for 4,600+ companies',
+      'Engineered AI fundamental analysis pipeline computing 50+ financial metrics',
+      'Developed automated financial OCR pipeline for multi-year statements'
+    ]
+  },
+  {
     id: 'exp-esri',
     role: 'AI/ML Intern',
     company: 'ESRI India Tech Pvt. Ltd.',
