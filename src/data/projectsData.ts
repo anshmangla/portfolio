@@ -82,6 +82,83 @@ export const projectsData: Project[] = [
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80'
   },
   {
+    id: 'bookvault',
+    title: 'BookVault',
+    shortDescription: 'Full-stack personal reading library with Google Books API integration, reading analytics, and PostgreSQL storage.',
+    fullDescription: 'BookVault is a full-stack personal reading library for discovering books, recording reading history, writing notes and reviews, and exploring reading analytics. It uses the Google Books API for normalized book metadata while keeping API credentials securely on the server. Each authenticated user receives a private library stored in PostgreSQL.',
+    problem: 'Keeping track of reading history, notes, and reviews across disparate platforms often lacks personalization, unified analytics, and privacy.',
+    solution: 'Built a robust Node.js and Express platform that integrates with Google Books for rich metadata, implements custom PostgreSQL data schemas for private user libraries, and visualizes reading habits with Chart.js.',
+    architecture: 'Browser (EJS/Bootstrap) -> Express App (Auth, Cache, Services) -> Google Books API & PostgreSQL DB.',
+    features: [
+      'Guided book discovery via Google Books API with caching and duplicate detection',
+      'Personal library dashboard with sorting, filtering, and server-side pagination',
+      'Detailed reading analytics including rating distributions, reading goals, and monthly charts',
+      'Secure authentication using Passport.js with optional Google OAuth integration'
+    ],
+    techStack: ['Node.js', 'Express', 'PostgreSQL', 'Google Books API', 'Passport.js', 'Chart.js', 'EJS', 'Bootstrap 5'],
+    challenges: [
+      'Handling sparse metadata and missing covers gracefully from external API sources.',
+      'Structuring additive PostgreSQL migrations for features like soft-deletion and reading goals without data loss.'
+    ],
+    results: [
+      'Delivered a fully responsive and keyboard-accessible web application with light and dark themes.',
+      'Achieved robust error handling with centralized Express error logging and duplicate-submission protection.',
+      'Successfully deployed the production environment on Render and Neon PostgreSQL.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla/BookVault',
+    demoUrl: 'https://bookvault-elmm.onrender.com/',
+    featured: true,
+    category: 'Platform',
+    metrics: [
+      { label: 'Database', value: 'PostgreSQL' },
+      { label: 'Integration', value: 'Google Books' },
+      { label: 'Backend', value: 'Node/Express' }
+    ],
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'finance-copilot',
+    title: 'Finance Copilot',
+    shortDescription: 'Personal finance assistant utilizing LLMs to read SMS messages, categorize transactions, and answer questions about spending.',
+    fullDescription: 'Built a personal finance assistant that reads bank SMS messages, categorizes transactions, and lets users ask questions about their spending patterns. Leveraged Groq-hosted Llama models for high-speed categorization and conversational insights.',
+    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits.',
+    solution: 'Engineered an automated agentic pipeline that ingests SMS webhooks, parses transaction details, and provides a conversational interface for insights.',
+    architecture: 'SMS Webhook -> FastAPI -> Llama 3.1 8b (Categorization) -> CSV/JSON Storage -> LangChain Agent (Llama 3.3 70b) -> Streamlit UI.',
+    features: [
+      'FastAPI webhook integration to receive real-time bank SMS messages',
+      'Automated transaction parsing, duplicate filtering, and category classification',
+      'Llama-3.1-8b-instant used for rapid transaction categorization',
+      'Llama-3.3-70b-versatile powers the conversational finance assistant',
+      'LangChain ZERO_SHOT_REACT_DESCRIPTION with custom tools for spending summaries and goal tracking'
+    ],
+    techStack: ['Python', 'FastAPI', 'Streamlit', 'LangChain', 'Groq (Llama 3)', 'CSV/JSON'],
+    challenges: [
+      'Ensuring reliable classification of cryptic bank SMS formats into standardized categories.',
+      'Building robust LangChain tools that accurately calculate spending summaries without hallucinations.'
+    ],
+    results: [
+      'Successfully automated transaction classification with near real-time latency.',
+      'Provided users with an intuitive conversational interface for tracking budgets and goals.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'GenAI',
+    metrics: [
+      { label: 'Latency', value: 'Real-time' },
+      { label: 'LLM', value: 'Llama 3' },
+      { label: 'Framework', value: 'LangChain' }
+    ],
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
     id: 'geospatial-rag-assistant',
     title: 'Multi-Source Geospatial Query & RAG Assistant',
     shortDescription: 'Built multi-source geospatial query agents and a 2,000+ PDF RAG document assistant with Grad-CAM satellite imagery interpretation.',
@@ -158,83 +235,6 @@ export const projectsData: Project[] = [
       { label: 'Stack', value: 'Python / React' }
     ],
     image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'bookvault',
-    title: 'BookVault',
-    shortDescription: 'Full-stack personal reading library with Google Books API integration, reading analytics, and PostgreSQL storage.',
-    fullDescription: 'BookVault is a full-stack personal reading library for discovering books, recording reading history, writing notes and reviews, and exploring reading analytics. It uses the Google Books API for normalized book metadata while keeping API credentials securely on the server. Each authenticated user receives a private library stored in PostgreSQL.',
-    problem: 'Keeping track of reading history, notes, and reviews across disparate platforms often lacks personalization, unified analytics, and privacy.',
-    solution: 'Built a robust Node.js and Express platform that integrates with Google Books for rich metadata, implements custom PostgreSQL data schemas for private user libraries, and visualizes reading habits with Chart.js.',
-    architecture: 'Browser (EJS/Bootstrap) -> Express App (Auth, Cache, Services) -> Google Books API & PostgreSQL DB.',
-    features: [
-      'Guided book discovery via Google Books API with caching and duplicate detection',
-      'Personal library dashboard with sorting, filtering, and server-side pagination',
-      'Detailed reading analytics including rating distributions, reading goals, and monthly charts',
-      'Secure authentication using Passport.js with optional Google OAuth integration'
-    ],
-    techStack: ['Node.js', 'Express', 'PostgreSQL', 'Google Books API', 'Passport.js', 'Chart.js', 'EJS', 'Bootstrap 5'],
-    challenges: [
-      'Handling sparse metadata and missing covers gracefully from external API sources.',
-      'Structuring additive PostgreSQL migrations for features like soft-deletion and reading goals without data loss.'
-    ],
-    results: [
-      'Delivered a fully responsive and keyboard-accessible web application with light and dark themes.',
-      'Achieved robust error handling with centralized Express error logging and duplicate-submission protection.',
-      'Successfully deployed the production environment on Render and Neon PostgreSQL.'
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80'
-    ],
-    githubUrl: 'https://github.com/anshmangla/BookVault',
-    demoUrl: 'https://bookvault-elmm.onrender.com/',
-    featured: true,
-    category: 'Platform',
-    metrics: [
-      { label: 'Database', value: 'PostgreSQL' },
-      { label: 'Integration', value: 'Google Books' },
-      { label: 'Backend', value: 'Node/Express' }
-    ],
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    id: 'finance-copilot',
-    title: 'Finance Copilot',
-    shortDescription: 'Personal finance assistant utilizing LLMs to read SMS messages, categorize transactions, and answer questions about spending.',
-    fullDescription: 'Built a personal finance assistant that reads bank SMS messages, categorizes transactions, and lets users ask questions about their spending patterns. Leveraged Groq-hosted Llama models for high-speed categorization and conversational insights.',
-    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits.',
-    solution: 'Engineered an automated agentic pipeline that ingests SMS webhooks, parses transaction details, and provides a conversational interface for insights.',
-    architecture: 'SMS Webhook -> FastAPI -> Llama 3.1 8b (Categorization) -> CSV/JSON Storage -> LangChain Agent (Llama 3.3 70b) -> Streamlit UI.',
-    features: [
-      'FastAPI webhook integration to receive real-time bank SMS messages',
-      'Automated transaction parsing, duplicate filtering, and category classification',
-      'Llama-3.1-8b-instant used for rapid transaction categorization',
-      'Llama-3.3-70b-versatile powers the conversational finance assistant',
-      'LangChain ZERO_SHOT_REACT_DESCRIPTION with custom tools for spending summaries and goal tracking'
-    ],
-    techStack: ['Python', 'FastAPI', 'Streamlit', 'LangChain', 'Groq (Llama 3)', 'CSV/JSON'],
-    challenges: [
-      'Ensuring reliable classification of cryptic bank SMS formats into standardized categories.',
-      'Building robust LangChain tools that accurately calculate spending summaries without hallucinations.'
-    ],
-    results: [
-      'Successfully automated transaction classification with near real-time latency.',
-      'Provided users with an intuitive conversational interface for tracking budgets and goals.'
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80'
-    ],
-    githubUrl: 'https://github.com/anshmangla',
-    demoUrl: 'https://github.com/anshmangla',
-    featured: true,
-    category: 'GenAI',
-    metrics: [
-      { label: 'Latency', value: 'Real-time' },
-      { label: 'LLM', value: 'Llama 3' },
-      { label: 'Framework', value: 'LangChain' }
-    ],
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 'cooking-agent',
