@@ -197,5 +197,194 @@ export const projectsData: Project[] = [
       { label: 'Backend', value: 'Node/Express' }
     ],
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'finance-copilot',
+    title: 'Finance Copilot',
+    shortDescription: 'Personal finance assistant utilizing LLMs to read SMS messages, categorize transactions, and answer questions about spending.',
+    fullDescription: 'Built a personal finance assistant that reads bank SMS messages, categorizes transactions, and lets users ask questions about their spending patterns. Leveraged Groq-hosted Llama models for high-speed categorization and conversational insights.',
+    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits.',
+    solution: 'Engineered an automated agentic pipeline that ingests SMS webhooks, parses transaction details, and provides a conversational interface for insights.',
+    architecture: 'SMS Webhook -> FastAPI -> Llama 3.1 8b (Categorization) -> CSV/JSON Storage -> LangChain Agent (Llama 3.3 70b) -> Streamlit UI.',
+    features: [
+      'FastAPI webhook integration to receive real-time bank SMS messages',
+      'Automated transaction parsing, duplicate filtering, and category classification',
+      'Llama-3.1-8b-instant used for rapid transaction categorization',
+      'Llama-3.3-70b-versatile powers the conversational finance assistant',
+      'LangChain ZERO_SHOT_REACT_DESCRIPTION with custom tools for spending summaries and goal tracking'
+    ],
+    techStack: ['Python', 'FastAPI', 'Streamlit', 'LangChain', 'Groq (Llama 3)', 'CSV/JSON'],
+    challenges: [
+      'Ensuring reliable classification of cryptic bank SMS formats into standardized categories.',
+      'Building robust LangChain tools that accurately calculate spending summaries without hallucinations.'
+    ],
+    results: [
+      'Successfully automated transaction classification with near real-time latency.',
+      'Provided users with an intuitive conversational interface for tracking budgets and goals.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'GenAI',
+    metrics: [
+      { label: 'Latency', value: 'Real-time' },
+      { label: 'LLM', value: 'Llama 3' },
+      { label: 'Framework', value: 'LangChain' }
+    ],
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'cooking-agent',
+    title: 'Cooking Agent',
+    shortDescription: 'Multimodal AI cooking assistant that takes a fridge image, identifies ingredients, and creates a recipe based on constraints.',
+    fullDescription: 'Developed a multimodal AI cooking assistant designed to reduce food waste and simplify meal planning. By taking an image of a refrigerator\'s contents, the agent identifies available ingredients and generates step-by-step recipes adhering to user diet and time constraints.',
+    problem: 'People often struggle to figure out what to cook with the ingredients they already have, leading to food waste and repetitive meals.',
+    solution: 'Utilized GPT-4o-mini\'s vision capabilities to extract ingredients from images and orchestrate a recipe generation pipeline tailored to specific user parameters.',
+    architecture: 'Image Upload (Streamlit) -> OpenAI API (GPT-4o-mini Vision) -> Ingredient Extraction -> Constraint Processing -> Recipe Generation Pipeline.',
+    features: [
+      'Multimodal image understanding to accurately identify available ingredients from fridge photos',
+      'Multi-step processing pipeline separating ingredient extraction from recipe generation',
+      'Customizable generation based on dietary restrictions and time constraints',
+      'Stateless, in-memory architecture bypassing the need for complex database infrastructure'
+    ],
+    techStack: ['Python', 'OpenAI API (GPT-4o-mini)', 'Streamlit'],
+    challenges: [
+      'Accurately identifying obscured or partially visible ingredients in fridge images.',
+      'Structuring prompts to ensure the model strictly adheres to user dietary constraints.'
+    ],
+    results: [
+      'Created a highly responsive application capable of instantly turning fridge photos into actionable meal plans.',
+      'Demonstrated effective use of multimodal LLMs in a practical consumer use case.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'GenAI',
+    metrics: [
+      { label: 'Model', value: 'GPT-4o-mini' },
+      { label: 'Input', value: 'Image/Vision' },
+      { label: 'UI', value: 'Streamlit' }
+    ],
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'youtube-shorts-agent',
+    title: 'YouTube Shorts Agent',
+    shortDescription: 'Automated Python pipeline that generates trending short vertical videos complete with scripts, voiceovers, and subtitles.',
+    fullDescription: 'Built an end-to-end Python pipeline that automates the creation of short vertical videos for platforms like YouTube Shorts and TikTok. The agent identifies trending topics, writes scripts, synthesizes voiceovers, generates precise subtitles, and composites the final video entirely programmatically.',
+    problem: 'Creating high-quality short-form video content requires significant manual effort across research, scripting, audio recording, and video editing.',
+    solution: 'Automated the entire content creation lifecycle using a combination of LLMs for scripting, text-to-speech, transcription models for subtitles, and programmatic video editing.',
+    architecture: 'Pytrends (Topic Discovery) -> Groq Llama 3 (Scripting) -> gTTS (Audio) -> Whisper (Timestamps) -> MoviePy (Compositing).',
+    features: [
+      'Automated trending topic discovery using the Pytrends library',
+      'Script generation leveraging Llama-3.1-8b-instant through Groq for high-speed inference',
+      'Voice synthesis using Google Text-to-Speech (gTTS)',
+      'Word-level timestamp extraction using OpenAI Whisper for dynamic subtitle generation',
+      'Programmatic video compositing, including audio, text overlays, and clips using MoviePy'
+    ],
+    techStack: ['Python', 'Groq (Llama 3)', 'Pytrends', 'gTTS', 'OpenAI Whisper', 'MoviePy'],
+    challenges: [
+      'Synchronizing word-level text overlays perfectly with the generated audio track.',
+      'Managing memory and rendering times during programmatic video compositing with MoviePy.'
+    ],
+    results: [
+      'Successfully automated the generation of fully timed and captioned vertical videos.',
+      'Reduced the time-to-publish for short-form content from hours to minutes.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'Automation',
+    metrics: [
+      { label: 'Video Edit', value: 'MoviePy' },
+      { label: 'Transcription', value: 'Whisper' },
+      { label: 'Script', value: 'Llama 3' }
+    ],
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'fundamental-analysis-engine',
+    title: 'Fundamental Analysis Engine',
+    shortDescription: 'Python system that processes financial JSON data to compute metrics and generate structured Gemini-powered stock analysis reports.',
+    fullDescription: 'Developed a robust backend engine that ingests bulk financial JSON data and generates comprehensive, structured stock analysis reports. The system programmatically calculates key financial metrics before injecting them as structured context into Gemini 1.5 Pro to generate a final 12-section Markdown report.',
+    problem: 'Sifting through raw financial JSON data to perform fundamental stock analysis is complex and requires synthesizing dozens of individual metrics into a cohesive narrative.',
+    solution: 'Created a hybrid pipeline that combines deterministic rule-based scoring and programmatic metric calculation with the advanced reasoning capabilities of Gemini 1.5 Pro.',
+    architecture: 'Raw JSON Ingestion -> Pandas/NumPy Processing -> 50+ Metric Calculation -> Rule-Based Scoring -> Structured Context -> Gemini 1.5 Pro -> Markdown Report.',
+    features: [
+      'Backend pipeline built with Python, Pydantic, Pandas, and NumPy for robust data validation and processing',
+      'Programmatic calculation of over 50 financial metrics, including CAGR and ROE',
+      'Custom rule-based scoring system assigning a 100-point fundamental quality score',
+      'Direct structured data injection into Gemini 1.5 Pro (bypassing the need for a vector database)',
+      'Automated generation of detailed 12-section Markdown financial reports'
+    ],
+    techStack: ['Python', 'Pydantic', 'Pandas', 'NumPy', 'Gemini 1.5 Pro'],
+    challenges: [
+      'Ensuring absolute mathematical accuracy by calculating metrics programmatically before relying on the LLM for interpretation.',
+      'Handling missing or malformed financial data in the source JSON files gracefully.'
+    ],
+    results: [
+      'Achieved the ability to process 3,600+ lines of financial JSON in seconds.',
+      'Produced highly accurate, insightful, and nicely formatted stock analysis reports automatically.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'GenAI',
+    metrics: [
+      { label: 'Processing', value: '3,600+ lines/sec' },
+      { label: 'Model', value: 'Gemini 1.5 Pro' },
+      { label: 'Metrics', value: '50+ Computed' }
+    ],
+    image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    id: 'geospatial-due-diligence',
+    title: 'Geospatial Due Diligence Pipeline',
+    shortDescription: 'Python pipeline for company facility verification using addresses, maps, and satellite imagery analysis.',
+    fullDescription: 'Engineered a highly automated Python pipeline for conducting geospatial due diligence on company facilities. By integrating multiple mapping and satellite APIs, the system verifies physical addresses, calculates building footprints, checks logistics proximity, and compares historical satellite imagery to detect structural changes over time.',
+    problem: 'Verifying physical corporate assets and facilities remotely for due diligence requires manual cross-referencing of maps, satellite images, and logistics data.',
+    solution: 'Automated the verification process by building a five-stage API orchestration pipeline that algorithmically extracts footprints and compares pixel variances in satellite imagery.',
+    architecture: 'Input Address -> Geocoding Fallback Chain -> Footprint Calculation (OSM) -> Logistics Proximity check -> Satellite Pixel Variance (Sentinel Hub) -> JSON/Markdown Evidence.',
+    features: [
+      'Five-stage processing pipeline with resilient fallback options for geocoding accuracy',
+      'Algorithmic calculation of building footprint areas using the Shoelace formula',
+      'Automated proximity checks to key logistics locations and infrastructure',
+      'Pixel variance analysis across historical satellite images to detect structural changes',
+      'Integration with Google Geocoding, Mappls, Sentinel Hub, and OpenStreetMap Overpass APIs'
+    ],
+    techStack: ['Python', 'Requests', 'NumPy', 'Google Geocoding API', 'Mappls', 'Sentinel Hub', 'OpenStreetMap'],
+    challenges: [
+      'Handling rate limits and varying data quality across four different geospatial APIs.',
+      'Accurately identifying meaningful structural changes versus seasonal noise in satellite pixel variance analysis.'
+    ],
+    results: [
+      'Reduced the due diligence verification time to under 20 seconds per facility.',
+      'Automatically generated comprehensive JSON and Markdown evidence files for analysts.'
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80'
+    ],
+    githubUrl: 'https://github.com/anshmangla',
+    demoUrl: 'https://github.com/anshmangla',
+    featured: true,
+    category: 'Computer Vision',
+    metrics: [
+      { label: 'Execution', value: '< 20 seconds' },
+      { label: 'APIs', value: '4 Integrations' },
+      { label: 'Analysis', value: 'Pixel Variance' }
+    ],
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80'
   }
 ];
