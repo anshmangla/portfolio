@@ -5,6 +5,6 @@ export const contactData: ContactInfo = {
   linkedin: 'https://linkedin.com/in/anshmangla',
   github: 'https://github.com/anshmangla',
   resumeUrl: '/Ansh_Mangla_Resume.pdf',
-  location: 'Noida / New Delhi, India (Open to Remote & Relocation)',
+  location: 'New Delhi, India (Open to Remote & Relocation)',
   status: 'AI/ML Engineer (B.Tech Graduate). Open to full-time engineering roles and impactful data-driven opportunities.'
 };
