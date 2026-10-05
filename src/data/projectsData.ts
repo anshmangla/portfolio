@@ -122,27 +122,27 @@ export const projectsData: Project[] = [
   },
   {
     id: 'finance-copilot',
-    title: 'Finance Copilot',
-    shortDescription: 'Personal finance assistant utilizing LLMs to read SMS messages, categorize transactions, and answer questions about spending.',
-    fullDescription: 'Built a personal finance assistant that reads bank SMS messages, categorizes transactions, and lets users ask questions about their spending patterns. Leveraged Groq-hosted Llama models for high-speed categorization and conversational insights.',
-    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits.',
-    solution: 'Engineered an automated agentic pipeline that ingests SMS webhooks, parses transaction details, and provides a conversational interface for insights.',
-    architecture: 'SMS Webhook -> FastAPI -> Llama 3.1 8b (Categorization) -> CSV/JSON Storage -> LangChain Agent (Llama 3.3 70b) -> Streamlit UI.',
+    title: 'Personal Finance Copilot',
+    shortDescription: 'Multi-tenant agentic personal finance copilot featuring Groq Vision receipt scanning, LangGraph chat, and Neon PostgreSQL.',
+    fullDescription: 'An intelligent, multi-tenant agentic personal finance copilot designed to track expenses, scan receipts using AI vision, manage recurring subscriptions, monitor budgets, and provide financial insights through an autonomous conversational AI agent. Built with a FastAPI backend connected to Neon PostgreSQL and two robust frontends: a premium Next.js Web App with glassmorphic UI and a cross-platform Flutter Mobile App.',
+    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits or auto-parse receipts.',
+    solution: 'Engineered an automated agentic platform that uses Groq Vision for receipt scanning, LangGraph for stateful conversational insights, and Neon PostgreSQL for multi-tenant data storage.',
+    architecture: 'Next.js & Flutter Frontends -> FastAPI Backend -> LangGraph ReAct Agent (Groq Llama 3) -> Neon Serverless PostgreSQL & Google OAuth 2.0.',
     features: [
-      'FastAPI webhook integration to receive real-time bank SMS messages',
-      'Automated transaction parsing, duplicate filtering, and category classification',
-      'Llama-3.1-8b-instant used for rapid transaction categorization',
-      'Llama-3.3-70b-versatile powers the conversational finance assistant',
-      'LangChain ZERO_SHOT_REACT_DESCRIPTION with custom tools for spending summaries and goal tracking'
+      'Multi-tenant Google OAuth 2.0 with backend JWT validation and database-level encryption',
+      'LangGraph Conversational Agent with memory and SQL function calling tools',
+      'Multimodal receipt scanning via Groq Vision for automated transaction entry',
+      'Dynamic subscription tracking with overdue alerts and 1-tap payments',
+      'Premium Next.js UI featuring glassmorphism, Recharts visualization, and dark mode'
     ],
-    techStack: ['Python', 'FastAPI', 'Streamlit', 'LangChain', 'Groq (Llama 3)', 'CSV/JSON'],
+    techStack: ['Python', 'FastAPI', 'Next.js', 'Flutter', 'LangGraph', 'Neon PostgreSQL', 'Groq (Llama 3)'],
     challenges: [
-      'Ensuring reliable classification of cryptic bank SMS formats into standardized categories.',
-      'Building robust LangChain tools that accurately calculate spending summaries without hallucinations.'
+      'Implementing secure multi-tenancy and data isolation alongside stateful LangGraph agent memory.',
+      'Extracting structured financial data reliably from unstructured receipt images using multimodal LLMs.'
     ],
     results: [
-      'Successfully automated transaction classification with near real-time latency.',
-      'Provided users with an intuitive conversational interface for tracking budgets and goals.'
+      'Delivered a full-stack SaaS-ready application with robust authentication and cloud database integration.',
+      'Automated data entry significantly by integrating drag-and-drop receipt OCR parsing.'
     ],
     gallery: [
       'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80'
@@ -152,9 +152,9 @@ export const projectsData: Project[] = [
     featured: true,
     category: 'GenAI',
     metrics: [
-      { label: 'Latency', value: 'Real-time' },
-      { label: 'LLM', value: 'Llama 3' },
-      { label: 'Framework', value: 'LangChain' }
+      { label: 'Database', value: 'Neon PostgreSQL' },
+      { label: 'LLM', value: 'Groq Llama 3' },
+      { label: 'Frontend', value: 'Next.js & Flutter' }
     ],
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80'
   },
