@@ -2,6 +2,44 @@ import type { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
+    id: 'finance-copilot',
+    title: 'Personal Finance Copilot',
+    shortDescription: 'Multi-tenant agentic personal finance copilot featuring Groq Vision receipt scanning, LangGraph chat, and Neon PostgreSQL.',
+    fullDescription: 'An intelligent, multi-tenant agentic personal finance copilot designed to track expenses, scan receipts using AI vision, manage recurring subscriptions, monitor budgets, and provide financial insights through an autonomous conversational AI agent. Built with a FastAPI backend connected to Neon PostgreSQL and two robust frontends: a premium Next.js Web App with glassmorphic UI and a cross-platform Flutter Mobile App.',
+    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits or auto-parse receipts.',
+    solution: 'Engineered an automated agentic platform that uses Groq Vision for receipt scanning, LangGraph for stateful conversational insights, and Neon PostgreSQL for multi-tenant data storage.',
+    architecture: 'Next.js & Flutter Frontends -> FastAPI Backend -> LangGraph ReAct Agent (Groq Llama 3) -> Neon Serverless PostgreSQL & Google OAuth 2.0.',
+    features: [
+      'Multi-tenant Google OAuth 2.0 with backend JWT validation and database-level encryption',
+      'LangGraph Conversational Agent with memory and SQL function calling tools',
+      'Multimodal receipt scanning via Groq Vision for automated transaction entry',
+      'Dynamic subscription tracking with overdue alerts and 1-tap payments',
+      'Premium Next.js UI featuring glassmorphism, Recharts visualization, and dark mode'
+    ],
+    techStack: ['Python', 'FastAPI', 'Next.js', 'Flutter', 'LangGraph', 'Neon PostgreSQL', 'Groq (Llama 3)'],
+    challenges: [
+      'Implementing secure multi-tenancy and data isolation alongside stateful LangGraph agent memory.',
+      'Extracting structured financial data reliably from unstructured receipt images using multimodal LLMs.'
+    ],
+    results: [
+      'Delivered a full-stack SaaS-ready application with robust authentication and cloud database integration.',
+      'Automated data entry significantly by integrating drag-and-drop receipt OCR parsing.'
+    ],
+    gallery: [
+      '/finance-copilot.jpg'
+    ],
+    githubUrl: 'https://github.com/anshmangla/personal-finance-copilot',
+    demoUrl: 'https://financecopilot.up.railway.app',
+    featured: true,
+    category: 'GenAI',
+    metrics: [
+      { label: 'Database', value: 'Neon PostgreSQL' },
+      { label: 'LLM', value: 'Groq Llama 3' },
+      { label: 'Frontend', value: 'Next.js & Flutter' }
+    ],
+    image: '/finance-copilot.jpg'
+  },
+  {
     id: 'google-earth-engine-analytics',
     title: 'AI-Powered Google Earth Engine Analytics Platform',
     shortDescription: 'AI-powered geospatial analytics platform that converts natural-language questions into Google Earth Engine workflows. Uses LLMs for parameter extraction, dataset selection, dynamic code generation, and result interpretation.',
@@ -120,44 +158,7 @@ export const projectsData: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80'
   },
-  {
-    id: 'finance-copilot',
-    title: 'Personal Finance Copilot',
-    shortDescription: 'Multi-tenant agentic personal finance copilot featuring Groq Vision receipt scanning, LangGraph chat, and Neon PostgreSQL.',
-    fullDescription: 'An intelligent, multi-tenant agentic personal finance copilot designed to track expenses, scan receipts using AI vision, manage recurring subscriptions, monitor budgets, and provide financial insights through an autonomous conversational AI agent. Built with a FastAPI backend connected to Neon PostgreSQL and two robust frontends: a premium Next.js Web App with glassmorphic UI and a cross-platform Flutter Mobile App.',
-    problem: 'Manual expense tracking is tedious, and banking apps often lack conversational interfaces to query personal financial habits or auto-parse receipts.',
-    solution: 'Engineered an automated agentic platform that uses Groq Vision for receipt scanning, LangGraph for stateful conversational insights, and Neon PostgreSQL for multi-tenant data storage.',
-    architecture: 'Next.js & Flutter Frontends -> FastAPI Backend -> LangGraph ReAct Agent (Groq Llama 3) -> Neon Serverless PostgreSQL & Google OAuth 2.0.',
-    features: [
-      'Multi-tenant Google OAuth 2.0 with backend JWT validation and database-level encryption',
-      'LangGraph Conversational Agent with memory and SQL function calling tools',
-      'Multimodal receipt scanning via Groq Vision for automated transaction entry',
-      'Dynamic subscription tracking with overdue alerts and 1-tap payments',
-      'Premium Next.js UI featuring glassmorphism, Recharts visualization, and dark mode'
-    ],
-    techStack: ['Python', 'FastAPI', 'Next.js', 'Flutter', 'LangGraph', 'Neon PostgreSQL', 'Groq (Llama 3)'],
-    challenges: [
-      'Implementing secure multi-tenancy and data isolation alongside stateful LangGraph agent memory.',
-      'Extracting structured financial data reliably from unstructured receipt images using multimodal LLMs.'
-    ],
-    results: [
-      'Delivered a full-stack SaaS-ready application with robust authentication and cloud database integration.',
-      'Automated data entry significantly by integrating drag-and-drop receipt OCR parsing.'
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80'
-    ],
-    githubUrl: 'https://github.com/anshmangla',
-    demoUrl: 'https://github.com/anshmangla',
-    featured: true,
-    category: 'GenAI',
-    metrics: [
-      { label: 'Database', value: 'Neon PostgreSQL' },
-      { label: 'LLM', value: 'Groq Llama 3' },
-      { label: 'Frontend', value: 'Next.js & Flutter' }
-    ],
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80'
-  },
+  
   {
     id: 'geospatial-rag-assistant',
     title: 'Multi-Source Geospatial Query & RAG Assistant',
