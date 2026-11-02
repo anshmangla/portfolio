@@ -3,6 +3,7 @@ import {
   Hero,
   About,
   Experience,
+  Freelance,
   Skills,
   Projects,
   Education,
@@ -18,6 +19,8 @@ export const Home: React.FC = () => {
       <About />
       <SectionDivider />
       <Experience />
+      <SectionDivider />
+      <Freelance />
       <SectionDivider />
       <Skills />
       <SectionDivider />

@@ -73,3 +73,32 @@ export interface StatItem {
   value: string;
   description: string;
 }
+
+export interface FreelanceDeliverable {
+  type: 'Web Platform' | 'Mobile Application';
+  title: string;
+  platformBadge: string;
+  description: string;
+  techStack: string[];
+  features: string[];
+  metrics?: { label: string; value: string }[];
+  liveUrl?: string;
+  codeUrl?: string;
+}
+
+export interface FreelanceItem {
+  id: string;
+  client: string;
+  clientUrl?: string;
+  projectTitle: string;
+  badge: string;
+  tagline: string;
+  role: string;
+  period: string;
+  location: string;
+  liveUrl?: string;
+  overview: string;
+  deliverables: FreelanceDeliverable[];
+  impactHighlights: string[];
+}
+

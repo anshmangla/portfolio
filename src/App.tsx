@@ -14,6 +14,7 @@ export const App: React.FC = () => {
     'hero',
     'about',
     'experience',
+    'freelance',
     'skills',
     'projects',
     'education',
